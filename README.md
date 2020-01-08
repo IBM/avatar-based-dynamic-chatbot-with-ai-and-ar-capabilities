@@ -45,10 +45,10 @@ Please follow the below to setup and run this code pattern.
 4. [Deploy the Flask Application](#4-deploy-the-flask-application)
 5. [Setup Cloud Functions](#5-setup-cloud-functions)
 6. [Setup Watson Assistant](#6-setup-watson-assistant)
-7. [Setup IBM Mobile Foundation Server & CLI](#7-setup-ibm-mobile-foundation-server-&-cli)
+7. [Setup IBM Mobile Foundation Server and CLI](#7-setup-ibm-mobile-foundation-server-and-cli)
 8. [Setup Google Cloud Anchors](#8-setup-google-cloud-anchors)
 9. [Configure Android App](#9-configure-android-app)
-10. [Build / Run Android App](#10-build-/-run-the-android-app)
+10. [Build and Run Android App](#10-build-and-run-the-android-app)
 
 ### 1. Clone the repo
 
@@ -497,7 +497,7 @@ Registering to server:'https://mobilefoundation-xxxx-xxxxx.xx-xx.mybluemix.net:4
 Registered app for platform: android
 ```
 
-### 10. Build / Run Android App
+### 10. Build and Run Android App
 
 * Install Android SDK Platform 24 (or higher) as below:
   - Launch Android Studio.
