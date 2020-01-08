@@ -45,10 +45,10 @@ Please follow the below to setup and run this code pattern.
 4. [Deploy the Flask Application](#4-deploy-the-flask-application)
 5. [Setup Cloud Functions](#5-setup-cloud-functions)
 6. [Setup Watson Assistant](#6-setup-watson-assistant)
-7. [Setup IBM Mobile Foundation Server & CLI, Build & Deploy Adapter](#7-setup-ibm-mobile-foundation-server-&-cli,-build-&-deploy-adapter)
+7. [Setup IBM Mobile Foundation Server & CLI](#7-setup-ibm-mobile-foundation-server-&-cli)
 8. [Setup Google Cloud Anchors](#8-setup-google-cloud-anchors)
 9. [Configure Android App](#9-configure-android-app)
-10. [Run the Android App](#10-run-the-android-app)
+10. [Build / Run Android App](#10-build-/-run-the-android-app)
 
 ### 1. Clone the repo
 
@@ -286,7 +286,7 @@ function main(params) {
 
 ![](doc/source/images/assistantskillid.png)
 
-### 7. Setup IBM Mobile Foundation Server & CLI, Build & Deploy Adapter
+### 7. Setup IBM Mobile Foundation Server & CLI
 
 #### 7.1 Setup Ionic and MFP CLI
 
