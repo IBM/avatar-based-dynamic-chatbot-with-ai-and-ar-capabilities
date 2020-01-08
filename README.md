@@ -45,9 +45,9 @@ Please follow the below to setup and run this code pattern.
 4. [Deploy the Flask Application](#4-deploy-the-flask-application)
 5. [Setup Cloud Functions](#5-setup-cloud-functions)
 6. [Setup Watson Assistant](#6-setup-watson-assistant)
-7. [Build and Deploy Mobile Foundation Adapter](#7-build-and-deploy-mobile-foundation-adapter)
-8. [Setup Poly Objects in Android Studio](#8-setup-poly-objects-in-android-studio)
-9. [Setup Google Cloud Anchors](#9-setup-google-cloud-anchors)
+7. [Setup IBM Mobile Foundation Server & CLI, Build & Deploy Adapter](#7-setup-ibm-mobile-foundation-server-&-cli,-build-&-deploy-adapter)
+8. [Setup Google Cloud Anchors](#8-setup-google-cloud-anchors)
+9. [Configure Android App](#9-configure-android-app)
 10. [Run the Android App](#10-run-the-android-app)
 
 ### 1. Clone the repo
