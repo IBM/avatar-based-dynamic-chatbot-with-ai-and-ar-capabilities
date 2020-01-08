@@ -48,7 +48,7 @@ Please follow the below to setup and run this code pattern.
 7. [Setup IBM Mobile Foundation Server and CLI](#7-setup-ibm-mobile-foundation-server-and-cli)
 8. [Setup Google Cloud Anchors](#8-setup-google-cloud-anchors)
 9. [Configure Android App](#9-configure-android-app)
-10. [Build and Run Android App](#10-build-and-run-the-android-app)
+10. [Build and Run Android App](#10-build-and-run-android-app)
 
 ### 1. Clone the repo
 
@@ -286,7 +286,7 @@ function main(params) {
 
 ![](doc/source/images/assistantskillid.png)
 
-### 7. Setup IBM Mobile Foundation Server & CLI
+### 7. Setup IBM Mobile Foundation Server and CLI
 
 #### 7.1 Setup Ionic and MFP CLI
 
