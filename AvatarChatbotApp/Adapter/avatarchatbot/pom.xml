@@ -1,0 +1,51 @@
+<!--
+	Licensed Materials - Property of IBM
+	5725-I43 (C) Copyright IBM Corp. 2011, 2016. All Rights Reserved.
+	US Government Users Restricted Rights - Use, duplication or
+	disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ibm</groupId>
+	<artifactId>avatarchatbot</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>adapter</packaging>
+	<name>avatarchatbot</name>
+
+	<properties>
+		<!-- Use UTF-8 as the encoding of the adapter -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- MobileFirst adapter deployment properties -->
+		<mfpfUrl>http://localhost:9080/mfpadmin</mfpfUrl>
+		<mfpfUser>admin</mfpfUser>
+		<mfpfPassword>admin</mfpfPassword>
+		<mfpfRuntime>mfp</mfpfRuntime>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.ibm.mfp</groupId>
+			<artifactId>adapter-maven-api</artifactId>
+			<scope>provided</scope>
+			<version>8.0.2019092701</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ibm.mfp</groupId>
+			<artifactId>mfp-security-checks-base</artifactId>
+			<version>[8.0.0,9.0.0)</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.ibm.mfp</groupId>
+				<artifactId>adapter-maven-plugin</artifactId>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

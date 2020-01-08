@@ -1,0 +1,390 @@
+{
+   "accessors" : [
+      {
+         "bufferView" : 0,
+         "byteOffset" : 0,
+         "componentType" : 5123,
+         "count" : 6384,
+         "max" : [ 1199 ],
+         "min" : [ 0 ],
+         "name" : "buffer-0-group-0-mesh-0-indices",
+         "type" : "SCALAR"
+      },
+      {
+         "bufferView" : 2,
+         "byteOffset" : 0,
+         "componentType" : 5126,
+         "count" : 1200,
+         "max" : [ 28.30439949035645, 45.25310134887695, 19.12129974365234 ],
+         "min" : [ -28.50219917297363, -0.07310000061988831, -8.388199806213379 ],
+         "name" : "buffer-0-group-0-mesh-0-position",
+         "type" : "VEC3"
+      },
+      {
+         "bufferView" : 2,
+         "byteOffset" : 14400,
+         "componentType" : 5126,
+         "count" : 1200,
+         "max" : [ 0.9998999834060669, 0.998199999332428, 0.9977999925613403 ],
+         "min" : [ -0.9997000098228455, -0.9883999824523926, -0.9782999753952026 ],
+         "name" : "buffer-0-group-0-mesh-0-normal",
+         "type" : "VEC3"
+      },
+      {
+         "bufferView" : 1,
+         "byteOffset" : 0,
+         "componentType" : 5126,
+         "count" : 1200,
+         "max" : [ 0.9882000088691711, 0 ],
+         "min" : [ 0, -0.9790999889373779 ],
+         "name" : "buffer-0-group-0-mesh-0-texcoord",
+         "type" : "VEC2"
+      },
+      {
+         "bufferView" : 0,
+         "byteOffset" : 12768,
+         "componentType" : 5123,
+         "count" : 8724,
+         "max" : [ 1597 ],
+         "min" : [ 0 ],
+         "name" : "buffer-0-group-1-mesh-0-indices",
+         "type" : "SCALAR"
+      },
+      {
+         "bufferView" : 2,
+         "byteOffset" : 28800,
+         "componentType" : 5126,
+         "count" : 1598,
+         "max" : [ 23.65399932861328, 99.85939788818359, 12.91790008544922 ],
+         "min" : [ -23.28549957275391, 0, -14.42189979553223 ],
+         "name" : "buffer-0-group-1-mesh-0-position",
+         "type" : "VEC3"
+      },
+      {
+         "bufferView" : 2,
+         "byteOffset" : 47976,
+         "componentType" : 5126,
+         "count" : 1598,
+         "max" : [ 0.9998999834060669, 0.9995999932289124, 0.9991000294685364 ],
+         "min" : [ -0.9994000196456909, -0.9995999932289124, -0.9965000152587891 ],
+         "name" : "buffer-0-group-1-mesh-0-normal",
+         "type" : "VEC3"
+      },
+      {
+         "bufferView" : 1,
+         "byteOffset" : 9600,
+         "componentType" : 5126,
+         "count" : 1598,
+         "max" : [ 0.9810000061988831, 0 ],
+         "min" : [ 0, -0.989799976348877 ],
+         "name" : "buffer-0-group-1-mesh-0-texcoord",
+         "type" : "VEC2"
+      },
+      {
+         "bufferView" : 0,
+         "byteOffset" : 30216,
+         "componentType" : 5123,
+         "count" : 10692,
+         "max" : [ 2219 ],
+         "min" : [ 0 ],
+         "name" : "buffer-0-group-2-mesh-0-indices",
+         "type" : "SCALAR"
+      },
+      {
+         "bufferView" : 2,
+         "byteOffset" : 67152,
+         "componentType" : 5126,
+         "count" : 2220,
+         "max" : [ 30.3257999420166, 146.6501007080078, 18.15539932250977 ],
+         "min" : [ -31.3981990814209, 0, -18.53520011901855 ],
+         "name" : "buffer-0-group-2-mesh-0-position",
+         "type" : "VEC3"
+      },
+      {
+         "bufferView" : 2,
+         "byteOffset" : 93792,
+         "componentType" : 5126,
+         "count" : 2220,
+         "max" : [ 0.9994999766349792, 1, 0.9976999759674072 ],
+         "min" : [ -0.9998000264167786, -0.9990000128746033, -0.9991000294685364 ],
+         "name" : "buffer-0-group-2-mesh-0-normal",
+         "type" : "VEC3"
+      },
+      {
+         "bufferView" : 1,
+         "byteOffset" : 22384,
+         "componentType" : 5126,
+         "count" : 2220,
+         "max" : [ 0.9926999807357788, 0 ],
+         "min" : [ 0, -0.9908000230789185 ],
+         "name" : "buffer-0-group-2-mesh-0-texcoord",
+         "type" : "VEC2"
+      },
+      {
+         "bufferView" : 0,
+         "byteOffset" : 51600,
+         "componentType" : 5123,
+         "count" : 57090,
+         "max" : [ 10573 ],
+         "min" : [ 0 ],
+         "name" : "buffer-0-group-3-mesh-0-indices",
+         "type" : "SCALAR"
+      },
+      {
+         "bufferView" : 2,
+         "byteOffset" : 120432,
+         "componentType" : 5126,
+         "count" : 10574,
+         "max" : [ 30.36549949645996, 166.4360961914062, 17.71129989624023 ],
+         "min" : [ -31.37400054931641, 0, -5.619500160217285 ],
+         "name" : "buffer-0-group-3-mesh-0-position",
+         "type" : "VEC3"
+      },
+      {
+         "bufferView" : 2,
+         "byteOffset" : 247320,
+         "componentType" : 5126,
+         "count" : 10574,
+         "max" : [ 1, 1, 1 ],
+         "min" : [ -0.9994000196456909, -1, -1 ],
+         "name" : "buffer-0-group-3-mesh-0-normal",
+         "type" : "VEC3"
+      },
+      {
+         "bufferView" : 1,
+         "byteOffset" : 40144,
+         "componentType" : 5126,
+         "count" : 10574,
+         "max" : [ 0.9925000071525574, 0 ],
+         "min" : [ 0, -0.9983000159263611 ],
+         "name" : "buffer-0-group-3-mesh-0-texcoord",
+         "type" : "VEC2"
+      }
+   ],
+   "asset" : {
+      "generator" : "Obj2GltfConverter",
+      "version" : "2.0"
+   },
+   "bufferViews" : [
+      {
+         "buffer" : 0,
+         "byteLength" : 165780,
+         "byteOffset" : 0,
+         "byteStride" : 0,
+         "name" : "buffer-0-bufferview-ushort",
+         "target" : 34963
+      },
+      {
+         "buffer" : 0,
+         "byteLength" : 124736,
+         "byteOffset" : 165784,
+         "byteStride" : 8,
+         "name" : "buffer-0-bufferview-vec2",
+         "target" : 34962
+      },
+      {
+         "buffer" : 0,
+         "byteLength" : 374208,
+         "byteOffset" : 290520,
+         "byteStride" : 12,
+         "name" : "buffer-0-bufferview-vec3",
+         "target" : 34962
+      },
+      {
+         "buffer" : 0,
+         "byteLength" : 1,
+         "byteOffset" : 0,
+         "name" : "buffer-0-bufferview-vec4"
+      }
+   ],
+   "buffers" : [
+      {
+         "byteLength" : 664728,
+         "name" : "buffer-0",
+         "uri" : "female.bin"
+      }
+   ],
+   "images" : [
+      {
+         "mimeType" : "image/png",
+         "name" : "Shoesmat-diffuse-image",
+         "uri" : "C:/Users/Dom/Downloads/Idle (1).fbm/female_Shoes_Diffuse.png"
+      },
+      {
+         "mimeType" : "image/png",
+         "name" : "Bottommat-diffuse-image",
+         "uri" : "C:/Users/Dom/Downloads/Idle (1).fbm/female_Bottom_Diffuse.png"
+      },
+      {
+         "mimeType" : "image/png",
+         "name" : "Topmat-diffuse-image",
+         "uri" : "C:/Users/Dom/Downloads/Idle (1).fbm/female_Top_Diffuse.png"
+      },
+      {
+         "mimeType" : "image/png",
+         "name" : "Bodymat-diffuse-image",
+         "uri" : "C:/Users/Dom/Downloads/Idle (1).fbm/female_Body_Diffuse.png"
+      }
+   ],
+   "materials" : [
+      {
+         "alphaMode" : "OPAQUE",
+         "doubleSided" : true,
+         "name" : "Shoesmat",
+         "pbrMetallicRoughness" : {
+            "baseColorFactor" : [ 1, 1, 1, 1 ],
+            "baseColorTexture" : {
+               "index" : 0,
+               "texCoord" : 0
+            },
+            "metallicFactor" : 0,
+            "roughnessFactor" : 0.8762441165122401
+         }
+      },
+      {
+         "alphaMode" : "OPAQUE",
+         "doubleSided" : true,
+         "name" : "Bottommat",
+         "pbrMetallicRoughness" : {
+            "baseColorFactor" : [ 1, 1, 1, 1 ],
+            "baseColorTexture" : {
+               "index" : 1,
+               "texCoord" : 0
+            },
+            "metallicFactor" : 0,
+            "roughnessFactor" : 0.8762441165122401
+         }
+      },
+      {
+         "alphaMode" : "OPAQUE",
+         "doubleSided" : true,
+         "name" : "Topmat",
+         "pbrMetallicRoughness" : {
+            "baseColorFactor" : [ 1, 1, 1, 1 ],
+            "baseColorTexture" : {
+               "index" : 2,
+               "texCoord" : 0
+            },
+            "metallicFactor" : 0,
+            "roughnessFactor" : 0.8762441165122401
+         }
+      },
+      {
+         "alphaMode" : "OPAQUE",
+         "doubleSided" : true,
+         "name" : "Bodymat",
+         "pbrMetallicRoughness" : {
+            "baseColorFactor" : [ 1, 1, 1, 1 ],
+            "baseColorTexture" : {
+               "index" : 3,
+               "texCoord" : 0
+            },
+            "metallicFactor" : 0,
+            "roughnessFactor" : 0.8762441165122401
+         }
+      }
+   ],
+   "meshes" : [
+      {
+         "name" : "buffer-0-mesh-0",
+         "primitives" : [
+            {
+               "attributes" : {
+                  "NORMAL" : 2,
+                  "POSITION" : 1,
+                  "TEXCOORD_0" : 3
+               },
+               "indices" : 0,
+               "material" : 0,
+               "mode" : 4
+            },
+            {
+               "attributes" : {
+                  "NORMAL" : 6,
+                  "POSITION" : 5,
+                  "TEXCOORD_0" : 7
+               },
+               "indices" : 4,
+               "material" : 1,
+               "mode" : 4
+            },
+            {
+               "attributes" : {
+                  "NORMAL" : 10,
+                  "POSITION" : 9,
+                  "TEXCOORD_0" : 11
+               },
+               "indices" : 8,
+               "material" : 2,
+               "mode" : 4
+            },
+            {
+               "attributes" : {
+                  "NORMAL" : 14,
+                  "POSITION" : 13,
+                  "TEXCOORD_0" : 15
+               },
+               "indices" : 12,
+               "material" : 3,
+               "mode" : 4
+            }
+         ]
+      }
+   ],
+   "nodes" : [
+      {
+         "mesh" : 0,
+         "name" : "node-0"
+      }
+   ],
+   "samplers" : [
+      {
+         "name" : "Shoesmat-diffuse-sampler",
+         "wrapS" : 10497,
+         "wrapT" : 10497
+      },
+      {
+         "name" : "Bottommat-diffuse-sampler",
+         "wrapS" : 10497,
+         "wrapT" : 10497
+      },
+      {
+         "name" : "Topmat-diffuse-sampler",
+         "wrapS" : 10497,
+         "wrapT" : 10497
+      },
+      {
+         "name" : "Bodymat-diffuse-sampler",
+         "wrapS" : 10497,
+         "wrapT" : 10497
+      }
+   ],
+   "scenes" : [
+      {
+         "name" : "scene-0",
+         "nodes" : [ 0 ]
+      }
+   ],
+   "textures" : [
+      {
+         "name" : "Shoesmat-diffuse-texture",
+         "sampler" : 0,
+         "source" : 0
+      },
+      {
+         "name" : "Bottommat-diffuse-texture",
+         "sampler" : 1,
+         "source" : 1
+      },
+      {
+         "name" : "Topmat-diffuse-texture",
+         "sampler" : 2,
+         "source" : 2
+      },
+      {
+         "name" : "Bodymat-diffuse-texture",
+         "sampler" : 3,
+         "source" : 3
+      }
+   ]
+}
