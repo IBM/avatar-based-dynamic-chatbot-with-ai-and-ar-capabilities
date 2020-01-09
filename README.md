@@ -52,11 +52,11 @@ Please follow the below to setup and run this code pattern.
 
 ### 1. Clone the repo
 
-Clone this [git repo](https://github.ibm.com/raravi86/Avatar.git).
+Clone this [git repo](https://github.com/IBM/avatar-based-dynamic-chatbot-with-ai-and-ar-capabilities.git).
 Else, in a terminal, run:
 
 ```
-$ https://github.ibm.com/raravi86/Avatar.git
+$ https://github.com/IBM/avatar-based-dynamic-chatbot-with-ai-and-ar-capabilities.git
 ```
 
 ### 2. Create Watson services with IBM Cloud
