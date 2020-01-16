@@ -477,7 +477,7 @@ After Installing postman type the `url` created in [step 3.2] and append it with
 
 ### 9. Configure Android App
 
-* There are 2 more things to be done before running the APP.
+* There are 3 more things to be done before running the APP.
 
 #### 9.1. Add the ARCore Cloud API Key in Android Studio
 
@@ -486,6 +486,28 @@ After Installing postman type the `url` created in [step 3.2] and append it with
 * In Android Studio open the **AndroidManifest.xml** file in app -> manifests -> AndroidManifest.xml and enter your ARCore Cloud API Key which was copied in step 8.
 
 ![](/doc/source/images/androidapikey.png)
+
+#### 9.2. Setup Poly Objects in Android Studio
+
+* In Android Studio goto `File > Preferences > Plugins` and click on *Browse Repositories* button.
+
+* Search for the keyword **sceneform** and install it as shown.
+
+![](doc/source/images/sceneformSetup.png)
+
+* Click on **`Build > Make Project`** to build the android project.
+
+>NOTE: The Initial Gradle Build may take much longer time please be patient.
+
+* Download the poly objects from the bellow URL's.
+| Asset | Credits | Link |
+| -------------  | ------------- | ------------- |
+| Female Human Avatar | Dominic Barnard | https://poly.google.com/view/5sDdEAo2zfq |
+| Arrow | Vanessa Cao | https://poly.google.com/view/bC3FokNqTpi |
+
+* Extract the .zip files.
+
+In Android Studio, in the left panel right click and select New > Sample Data Directory as shown.
 
 #### 9.2. Register the Android App to Mobile Foundation Server
 
