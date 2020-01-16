@@ -506,9 +506,16 @@ After Installing postman type the `url` created in [step 3.2] and append it with
 | Female Human Avatar | Dominic Barnard | https://poly.google.com/view/5sDdEAo2zfq |
 | Arrow | Vanessa Cao | https://poly.google.com/view/bC3FokNqTpi |
 
-* Extract the .zip files.
+* Extract the **`.zip`** files.
 
-In Android Studio, in the left panel right click and select New > Sample Data Directory as shown.
+* In Android Studio, in the left panel right click and select `New > Sample Data Directory` as shown.
+
+![](doc/source/images/1sampledatadir.png)
+
+* Right click on the newly created `sampledata` directory and select `Reveal in Finder` for Mac.
+>On Windows Right click on the newly created `sampledata` directory and select `Show in Explorer`.
+
+![](doc/source/images/2revealinfinder.png)
 
 #### 9.2. Register the Android App to Mobile Foundation Server
 
