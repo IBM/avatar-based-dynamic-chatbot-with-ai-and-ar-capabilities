@@ -42,16 +42,4 @@ dependencies {
     implementation 'com.ibm.watson.developer_cloud:android-sdk:0.5.0'
     implementation 'com.android.volley:volley:1.1.1'
     implementation 'com.ibm.mobile.foundation:ibmmobilefirstplatformfoundation:8.0.+'
-
 }
-
-
-sceneform.asset('sampledata/female.gltf',
-        'default',
-        'sampledata/female.sfa',
-        'src/main/assets/female')
-
-sceneform.asset('sampledata/arrow.fbx',
-        'default',
-        'sampledata/arrow.sfa',
-        'src/main/assets/arrow')

@@ -145,13 +145,13 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder a_builder = new AlertDialog.Builder(this);
         a_builder.setMessage("1. Rotate the device in '8' shaped position to calibrate. \n\n" +
                 "2. Tap on any anchor point to Summon the Watson Avatar.\n\n" +
-                "3. Tap and hold the microphone button and start talking...\n once done release the microphone button and wait for the assistant to reply.\n\n" +
-                "4. Click on the Route button to Train a Route\n")
+                "3. Click on the microphone button and start talking...\n once done talking click the microphone button again and wait for the assistant to reply.\n\n" +
+                "4. Click on the cancel button to hide the Watson Avatar\n")
                 .setCancelable(false)
                 .setPositiveButton("OK", (dialog, which) -> dialog.cancel());
         AlertDialog alert = a_builder.create();
         alert.setTitle("Tutorial");
-        alert.show();
+//        alert.show();
 
             // All Permissions are Granted Proceed
 
@@ -220,19 +220,19 @@ public class MainActivity extends AppCompatActivity {
 
         // Record Button onClick Listener
 
-//        assistant.setOnClickListener(v -> speech());
+        assistant.setOnClickListener(v -> speech());
 
         // Record Button Tap and hold ActionListener
 
-        assistant.setOnTouchListener((v, event) -> {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    recordMessage();
-
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    stopRecording();
-                }
-                return false;
-            });
+//        assistant.setOnTouchListener((v, event) -> {
+//                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+//                    recordMessage();
+//
+//                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+//                    stopRecording();
+//                }
+//                return false;
+//            });
     }
 
     private void InitializeWatsonServices(){
@@ -627,7 +627,7 @@ public class MainActivity extends AppCompatActivity {
                             try {
 
                                 audioMessage = outMessage;
-                                Log.d("TEST-> ", "The msg is:"+outMessage.getMessage()+"end");
+                                Log.d("TEST-> ", "The msg is:'"+outMessage.getMessage()+"'");
                                 streamPlayer = new StreamPlayer();
                                 if(audioMessage != null && !audioMessage.getMessage().isEmpty()) {
                                     SynthesizeOptions synthesizeOptions = new SynthesizeOptions.Builder()

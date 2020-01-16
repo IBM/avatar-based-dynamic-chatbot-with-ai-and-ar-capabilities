@@ -5,7 +5,6 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -60,20 +59,6 @@ public class ArNavigation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ar_navigation);
-
-
-        // Tutorial at the start of application
-
-        AlertDialog.Builder a_builder = new AlertDialog.Builder(this);
-        a_builder.setMessage("1. Rotate the device in '8' shaped position to calibrate. \n\n" +
-                "2. Tap on any anchor point to Place the Arrow mark.\n\n" +
-                "3. You will see a toast message when the anchor is successfully placed in the database.\n\n" +
-                "4. Once you see the toast message close the app and relaunch to add the next Arrow mark!\n")
-                .setCancelable(false)
-                .setPositiveButton("OK", (dialog, which) -> dialog.cancel());
-        AlertDialog alert = a_builder.create();
-        alert.setTitle("Tutorial to add path");
-        alert.show();
 
         // Map the XML file to JAVA
 

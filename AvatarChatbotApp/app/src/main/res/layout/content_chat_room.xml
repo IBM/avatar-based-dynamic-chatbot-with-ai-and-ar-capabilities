@@ -27,7 +27,7 @@
         android:layout_height="75dp"
         android:layout_marginLeft="170dp"
         android:layout_marginTop="600dp"
-        android:background="@drawable/ic_path"
+        android:background="@drawable/ic_clear_black_24dp"
         android:backgroundTint="@android:color/background_light"
         android:backgroundTintMode="src_in" />
 
