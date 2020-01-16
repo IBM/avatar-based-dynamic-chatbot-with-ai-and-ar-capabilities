@@ -510,12 +510,12 @@ After Installing postman type the `url` created in [step 3.2] and append it with
 
 * In Android Studio, in the left panel right click and select `New > Sample Data Directory` as shown.
 
-![](doc/source/images/1sampledatadir.png)
+<img src="doc/source/images/1sampledatadir.png" alt="sceneform" width="800" />
 
 * Right click on the newly created `sampledata` directory and select `Reveal in Finder` for Mac.
 >On Windows Right click on the newly created `sampledata` directory and select `Show in Explorer`.
 
-![](doc/source/images/2revealinfinder.png)
+<img src="doc/source/images/2revealinfinder.png" alt="sceneform" width="200" />
 
 * Create two directories named **Avatar** and **Arrow** and extract the contents from the respective `.zips` into the directories.
 
