@@ -500,6 +500,7 @@ After Installing postman type the `url` created in [step 3.2] and append it with
 >NOTE: The Initial Gradle Build may take much longer time please be patient.
 
 * Download the poly objects from the bellow URL's.
+
 | Asset | Credits | Link |
 | -------------  | ------------- | ------------- |
 | Female Human Avatar | Dominic Barnard | https://poly.google.com/view/5sDdEAo2zfq |
