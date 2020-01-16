@@ -517,7 +517,29 @@ After Installing postman type the `url` created in [step 3.2] and append it with
 
 ![](doc/source/images/2revealinfinder.png)
 
-#### 9.2. Register the Android App to Mobile Foundation Server
+* Create two directories named **Avatar** and **Arrow** and extract the contents from the respective `.zips` into the directories.
+
+![](doc/source/images/createDir.png)
+
+* Back to Android Studio, go to `sampledata > Avatar` and right click on `female.obj` file and select `Import Sceneform Asset` as shown.
+
+![](doc/source/images/femaleobj.png)
+
+* You will get an Import Wizard, Click on `Finish`.
+
+![](doc/source/images/femaleobjfinish.png)
+
+* Repeat the same for **Arrow**, go to `sampledata > Arrow` and right click on `model.obj` file and select `Import Sceneform Asset`.
+
+* Once you Import both the Assets, you can verify them under `Assets` directory as shown.
+
+![](doc/source/images/assets.png) 
+
+
+You are done Importing the Sceneform Assets at this point. 
+
+
+#### 9.3. Register the Android App to Mobile Foundation Server
 
 * On the Commandline, enter the following command to register the app to Mobile Foundation server.
 ```
