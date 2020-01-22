@@ -1,4 +1,4 @@
-# *Work in Progress*
+### ***Work in Progress***
 # Avatar based dynamic chatbot powered with AI and AR capabilities
 
 This Code Pattern is a demonstration of Avatar based Chatbot, an android mobile Chatbot Application with AI and AR capabilities which dynamically fetches the information using APIs in Watson Assistant via Webhooks(Cloud Functions).
