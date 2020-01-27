@@ -5,7 +5,7 @@ This Code Pattern is a demonstration of Avatar based Chatbot, an android mobile 
 
 When the reader has completed this Code Pattern, they will understand how to:
 
-* Create and work Avatar using a Mobile Application.
+* Create and use Avatar using a Mobile Application.
 * Use integrate Watson Assistant and Python Flask application using Webhooks. 
 * Use Webhooks.
 * Create a dynamic real time chatbot.
