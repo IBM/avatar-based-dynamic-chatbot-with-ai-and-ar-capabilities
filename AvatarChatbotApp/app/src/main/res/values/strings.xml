@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Avatar Chatbot</string>
-    <string name="what_s_on_your_mind">How may I help you?</string>
-    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
-    <string name="checking_internet_connectivity">Checking Internet Connectivity ...</string>
-    <string name="checking_permissions">Checking Permissions ...</string>
-    <string name="checking_mobile_foundation_n_server_connectivity">Checking Mobile Foundation\n Server Connectivity...</string>
-</resources>
