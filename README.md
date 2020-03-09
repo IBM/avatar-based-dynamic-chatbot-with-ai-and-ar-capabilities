@@ -11,7 +11,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 * Create a dynamic real time chatbot.
 
 <!--add an image in this path-->
-![](doc/source/images/Architecture.png)
+![](doc/source/images/architecture.png)
 
 <!--Optionally, add flow steps based on the architecture diagram-->
 ## Flow
