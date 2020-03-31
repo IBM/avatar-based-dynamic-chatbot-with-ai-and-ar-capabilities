@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Licensed Materials - Property of IBM
+	5725-I43 (C) Copyright IBM Corp. 2011, 2016. All Rights Reserved.
+	US Government Users Restricted Rights - Use, duplication or
+	disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<mfp:adapter name="avatarchatbot"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:mfp="http://www.ibm.com/mfp/integration"
+	xmlns:http="http://www.ibm.com/mfp/integration/http">
+
+	<displayName>avatarchatbot</displayName>
+	<description>avatarchatbot</description>
+
+	<JAXRSApplicationClass>com.ibm.AvatarchatbotApplication</JAXRSApplicationClass>
+	<property name="s2tapi" displayName="Speech To Text API Key" defaultValue=""/>
+	<property name="s2turl" displayName="Speech To Text URL" defaultValue=""/>
+	<property name="t2sapi" displayName="Text To Speech API Key" defaultValue=""/>
+	<property name="t2surl" displayName="Text To Speech URL" defaultValue=""/>
+	<property name="assistantapi" displayName="Watson Assistant API Key" defaultValue=""/>
+	<property name="assistanturl" displayName="Watson Assistant URL" defaultValue=""/>
+	<property name="assistantworkspaceid" displayName="Watson Assistant Skill ID" defaultValue=""/>
+	<property name="cloudfuncurl" displayName="Cloud Functions URL" defaultValue=""/>
+</mfp:adapter>

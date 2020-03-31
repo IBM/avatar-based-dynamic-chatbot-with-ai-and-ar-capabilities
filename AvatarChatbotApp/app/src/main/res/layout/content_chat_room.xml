@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"  xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.google.ar.sceneform.ux.ArFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </fragment>
+
+    <Button
+        android:id="@+id/removeAvatar"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Small"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="600dp"
+        android:background="@drawable/ic_clear_black_24dp"
+        android:backgroundTint="@android:color/background_light"
+        android:backgroundTintMode="src_in" />
+
+    <Button
+        android:id="@+id/assistant"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Small"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="690dp"
+        android:background="@android:drawable/ic_btn_speak_now"
+        android:backgroundTint="@android:color/background_light"
+        android:backgroundTintMode="src_in" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/btn_record"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@null"
+            android:elevation="0dp"
+            android:paddingLeft="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_mic_black_24dp" />
+
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="3.02"
+            android:background="@null"
+            android:hint="@string/what_s_on_your_mind"
+            android:lines="1"
+            android:paddingLeft="10dp" />
+
+        <!--<Button android:id="@+id/btn_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="ASK"
+            android:textSize="16dp"
+            android:textColor="@color/colorPrimary" />-->
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/btn_send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:elevation="0dp"
+            android:paddingLeft="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_send_black_24dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

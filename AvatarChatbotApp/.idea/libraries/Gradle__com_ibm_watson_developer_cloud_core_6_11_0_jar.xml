@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.ibm.watson.developer_cloud:core:6.11.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/core/6.11.0/fff9234ad00de0dc9caa07f0c2d0f8cae950f4fd/core-6.11.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/core/6.11.0/64a1ae6454080ef842e3ccf1ab6e713dae067204/core-6.11.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,5 @@
+---
+applications:
+ - name: my-api
+   random-route: true
+   memory: 128M

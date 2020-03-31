@@ -1,0 +1,242 @@
+{
+  "name": "Avatar-chatbot",
+  "intents": [
+    {
+      "intent": "food",
+      "examples": [
+        {
+          "text": "i am looking for a restro bar that good food ratings in this place"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "near_by",
+      "examples": [
+        {
+          "text": "places nearby"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "confirm_restaurant",
+      "examples": [
+        {
+          "text": "cool that works"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "negative_response",
+      "examples": [
+        {
+          "text": "no thanks"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "positive_response",
+      "examples": [
+        {
+          "text": "yes"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "location",
+      "examples": [
+        {
+          "text": "where am i?"
+        },
+        {
+          "text": "where am i"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-07-10"
+    }
+  },
+  "skill_id": "0e0e62ce-5e46-406e-a30c-e699359b2c11",
+  "webhooks": [
+    {
+      "url": "https://eu-gb.functions.cloud.ibm.com/api/v1/web/manoj.jahgirdar%40in.ibm.com_dev/default/chatbot-intermediator.json",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "response_condition",
+      "title": "response_10_1568630631726",
+      "parent": "node_6_1568630551769",
+      "conditions": "anything_else",
+      "dialog_node": "response_10_1568630631726",
+      "previous_sibling": "response_7_1568630629534"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1568630629534",
+      "output": {
+        "text": {
+          "values": [
+            "$webhook_result_2.nearby has the best rating around this place. Guess what? they are offering buy 1 get 1 on drinks today.  Do you want me to guide you to $webhook_result_2.nearby?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_6_1568630551769",
+      "conditions": "$webhook_result_2",
+      "dialog_node": "response_7_1568630629534"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1568625741540",
+      "parent": "node_4_1568624699284",
+      "conditions": "anything_else",
+      "dialog_node": "response_3_1568625741540",
+      "previous_sibling": "response_10_1568625739482"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1568625739482",
+      "output": {
+        "text": {
+          "values": [
+            "Hi! Looks like you are in $webhook_result_1.place ?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_4_1568624699284",
+      "conditions": "$webhook_result_1",
+      "dialog_node": "response_10_1568625739482"
+    },
+    {
+      "type": "standard",
+      "title": "Confirmation",
+      "output": {
+        "text": {
+          "values": [
+            "I got to know that you are a massive Nike fan, Do you want me to guide you to a nearby Nike store that has got new collections?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "conditions": "#positive_response",
+      "dialog_node": "node_5_1568270243757",
+      "previous_sibling": "node_6_1568630551769"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "text": {
+          "values": [
+            "I didn't understand. You can try rephrasing.",
+            "Can you reword your statement? I'm not understanding.",
+            "I didn't get your meaning."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_2_1568272032601"
+    },
+    {
+      "type": "standard",
+      "title": "Negative",
+      "output": {
+        "text": {
+          "values": [
+            "Okay, do you want me to help with anything else?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "conditions": "#negative_response",
+      "dialog_node": "node_6_1568270309901",
+      "previous_sibling": "node_5_1568270243757"
+    },
+    {
+      "type": "standard",
+      "title": "places nearby",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "place": "any"
+          },
+          "result_variable": "webhook_result_2"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#food",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_6_1568630551769",
+      "previous_sibling": "node_4_1568624699284"
+    },
+    {
+      "type": "standard",
+      "title": "Confirm Navigation",
+      "output": {
+        "text": {
+          "values": [
+            "Please follow the path."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "conditions": "#confirm_restaurant",
+      "dialog_node": "node_2_1568272032601",
+      "previous_sibling": "node_6_1568270309901"
+    },
+    {
+      "type": "standard",
+      "title": "where am I",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "lat": 13.0465,
+            "lon": 77.619926
+          },
+          "result_variable": "webhook_result_1"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "welcome",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_4_1568624699284"
+    }
+  ],
+  "workspace_id": "0e0e62ce-5e46-406e-a30c-e699359b2c11",
+  "counterexamples": [],
+  "system_settings": {
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}
