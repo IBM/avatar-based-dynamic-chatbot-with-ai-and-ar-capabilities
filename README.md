@@ -29,7 +29,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 <!--Optionally, update this section when the video is created-->
 # Watch the Video
-
+[![](https://img.youtube.com/vi/NOX_uWVymco/0.jpg)](https://youtu.be/NOX_uWVymco)
 
 ## Pre-requisites
 * [IBM Cloud account](https://www.ibm.com/cloud/): Create an IBM Cloud account.
