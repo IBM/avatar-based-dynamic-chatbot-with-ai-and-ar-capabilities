@@ -588,7 +588,7 @@ Registered app for platform: android
 
 1. The Avatar Chatbot tells user their location.
 
-> Hi! Looks like you are in <b>IBM G2 Block?</b>
+> Bot: Looks like you are in <b>"\<YOUR-LOCATION>?"</b>
 
 2. The user has to reply with yes to confirm.
 
@@ -598,7 +598,7 @@ Registered app for platform: android
 
 > I got to know that you are a massive <b>Nike fan</b>, Do you want me to guide you to a <b>nearby Nike store</b> that has got new collections?
 
-**NOTE: This feature is just to showcase the capabilities of watson services and is not currently implemented in the code pattern.**
+**NOTE: This feature is just to showcase the capabilities of watson services and is not currently implemented in the code pattern. You can modify as per your requirements.**
 
 4. Asuming user wants to do something else user has to reply with no thanks.
 
@@ -616,7 +616,7 @@ Registered app for platform: android
 
 7. The Avatar Chatbot finds out the best restaurant nearby.
 
-> Slug has the best rating around this place. Guess what? they are offering buy 1 get 1 on drinks today. Do you want me to guide you to Slug?
+> <b>\<Restaurant-Name></b> has the best rating around this place. Do you want me to guide you to <b>\<Restaurant-Name></b>?
 
 8. Asuming the user is satisfied with the result, the user confirms by saying cool works.
 
@@ -626,9 +626,12 @@ Registered app for platform: android
 
 > Please follow the path.
 
-- The User will then click on **SHOW ROUTE** button and the Augmented path will appear guiding you to the destination.
+- The User will then click on **SHOW ROUTE** button and the Augmented path will appear guiding you to the destination that you trained earlier.
 
 <img src="/doc/source/images/path.png" alt="path" width="240" /> 
+
+
+**NOTE: This code pattern acts as a foundation for building intelligent AR based chatbots. You can modify this code pattern and build as per your requirement.**
 
 # Troubleshooting
 
