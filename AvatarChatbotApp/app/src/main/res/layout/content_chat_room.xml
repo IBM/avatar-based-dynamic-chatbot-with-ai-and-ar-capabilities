@@ -26,10 +26,11 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginLeft="170dp"
-        android:layout_marginTop="600dp"
-        android:background="@drawable/ic_clear_black_24dp"
+        android:layout_marginTop="690dp"
+        android:background="@drawable/ic_path"
         android:backgroundTint="@android:color/background_light"
         android:backgroundTintMode="src_in" />
+
 
     <Button
         android:id="@+id/assistant"
@@ -37,7 +38,7 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginLeft="170dp"
-        android:layout_marginTop="690dp"
+        android:layout_marginTop="560dp"
         android:background="@android:drawable/ic_btn_speak_now"
         android:backgroundTint="@android:color/background_light"
         android:backgroundTintMode="src_in" />
@@ -96,5 +97,7 @@
 
 
     </LinearLayout>
+
+
 
 </RelativeLayout>

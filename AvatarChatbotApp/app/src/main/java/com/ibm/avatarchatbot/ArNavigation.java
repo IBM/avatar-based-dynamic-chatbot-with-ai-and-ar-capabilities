@@ -1,10 +1,12 @@
 package com.ibm.avatarchatbot;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,7 +33,7 @@ public class ArNavigation extends AppCompatActivity {
 
     private CustomARFragment arFragment;
     private EditText eTAnchorID;
-    private Button resolve, routeToMyDesk;
+    private Button resolve, routeToMyDesk, info;
 
     private enum AppAnchorState {
         NONE,
@@ -65,8 +67,27 @@ public class ArNavigation extends AppCompatActivity {
         eTAnchorID = findViewById(R.id.eTAnchorID);
         resolve = findViewById(R.id.resolve);
         routeToMyDesk = findViewById(R.id.routeToMyDesk);
+        info = findViewById(R.id.infopage);
+
+        info.setOnClickListener(view -> {
+            Intent intent = new Intent(this, Info.class);
+            startActivity(intent);
+        });
 
         myDb = new DatabaseHelper(this);
+
+
+        AlertDialog.Builder a_builder = new AlertDialog.Builder(this);
+        a_builder.setMessage(
+                "1. Tap on any anchor point to place the arrow.\n\n" +
+                "2. Wait until you see a toast message saying \"Anchor Hosted Successfully!\"\n once done relaunch the application and place the next arrow.\n\n" +
+                "3. Repeat this process until you have successfully trained your desired path.\n")
+                .setCancelable(false)
+                .setPositiveButton("OK", (dialog, which) -> dialog.cancel());
+        AlertDialog alert = a_builder.create();
+        alert.setTitle("Training Path Tutorial");
+        alert.show();
+
 
         // Toggle Developer Mode Settings
 
@@ -90,15 +111,25 @@ public class ArNavigation extends AppCompatActivity {
         arFragment = (CustomARFragment) getSupportFragmentManager().findFragmentById(R.id.fragment2);
 
         // AR Core Anchor points Tap Listener
+        TransformableNode node = new TransformableNode(arFragment.getTransformationSystem());
 
         arFragment.setOnTapArPlaneListener((hitResult, plane, motionEvent) -> {
 
             if(!isPlaced) {
-                anchor = arFragment.getArSceneView().getSession().hostCloudAnchor(hitResult.getTrackable().createAnchor(
-                        hitResult.getHitPose().compose(Pose.makeTranslation(0, 0, 0))));
+                anchor = Objects.requireNonNull(arFragment.getArSceneView()
+                        .getSession())
+                        .hostCloudAnchor(hitResult.getTrackable()
+                                .createAnchor(
+                                        hitResult.getHitPose()
+                                                .compose(
+                                                        Pose.makeTranslation(0, 0.5f, 0)
+                                                )
+                                )
+                        );
+
                 appAnchorState = AppAnchorState.HOSTING;
                 showToast("Hosting...");
-                createModel(anchor, 999);
+                createModel(anchor);
                 isPlaced = true;
             }
         });
@@ -145,7 +176,7 @@ public class ArNavigation extends AppCompatActivity {
             }
 
             Anchor resolvedAnchor = Objects.requireNonNull(arFragment.getArSceneView().getSession()).resolveCloudAnchor(anchorId);
-            createModel(resolvedAnchor, 999);
+            createModel(resolvedAnchor);
         });
 
         // Route Button Action Listener
@@ -175,7 +206,7 @@ public class ArNavigation extends AppCompatActivity {
                     return;
                 }
                 Anchor resolvedAnchor = Objects.requireNonNull(arFragment.getArSceneView().getSession()).resolveCloudAnchor(anchorId);
-                createModel(resolvedAnchor, i);
+                createModel(resolvedAnchor);
             }
         });
     }
@@ -189,40 +220,24 @@ public class ArNavigation extends AppCompatActivity {
     // Create AR Core Model
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    private void createModel(Anchor anchor, int i) {
+    private void createModel(Anchor anchor) {
 
-        if (i == 2)
             ModelRenderable
                     .builder()
-                    .setSource(this, Uri.parse("1358 Stop Sign.sfb"))
+                    .setSource(this, Uri.parse("model.sfb"))
                     .build()
-                    .thenAccept(modelRenderable -> placeModel(anchor, modelRenderable, i));
-        else
-            ModelRenderable
-                    .builder()
-                    .setSource(this, Uri.parse("arrow.sfb"))
-                    .build()
-                    .thenAccept(modelRenderable -> placeModel(anchor, modelRenderable, i));
+                    .thenAccept(modelRenderable -> placeModel(anchor, modelRenderable));
     }
 
     // Place Sceneform Model with all the vector transformations
 
-    private void placeModel(Anchor anchor, ModelRenderable modelRenderable, int i) {
+    private void placeModel(Anchor anchor, ModelRenderable modelRenderable) {
 
         AnchorNode anchorNode = new AnchorNode(anchor);
         arFragment.getArSceneView().getScene().addChild(anchorNode);
 
         TransformableNode node = new TransformableNode(arFragment.getTransformationSystem());
-        if (i == 0)
-            node.setLocalRotation(Quaternion.axisAngle(new Vector3(0, 1f, 0), 15));
-        else if (i == 1)
-            node.setLocalRotation(Quaternion.axisAngle(new Vector3(0, 1f, 0), 0));
-        else if (i == 4)
-            node.setLocalRotation(Quaternion.axisAngle(new Vector3(0, 1f, 0), 25));
-        else if (i == 3)
-            node.setLocalRotation(Quaternion.axisAngle(new Vector3(0, 1f, 0), 25));
-        else if (i == 2)
-            node.setLocalRotation(Quaternion.axisAngle(new Vector3(0, 1f, 0), -75));
+        node.setLocalRotation(Quaternion.axisAngle(new Vector3(0, 1f, 0), 205));
         node.setParent(anchorNode);
         node.setRenderable(modelRenderable);
     }

@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.location.Location;
 import android.location.LocationManager;
@@ -71,6 +72,7 @@ import com.worklight.wlclient.api.WLResourceRequest;
 import com.worklight.wlclient.api.WLResponse;
 import com.worklight.wlclient.api.WLResponseListener;
 import com.worklight.wlclient.auth.AccessToken;
+import com.tooltip.Tooltip;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -134,6 +136,8 @@ public class MainActivity extends AppCompatActivity {
     private String AssistantAPI="", AssistantWorkspaceID="", AssistantURL="";
     private String CloudFunctionsURL="";
 
+    Tooltip tooltip;
+
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,24 +150,24 @@ public class MainActivity extends AppCompatActivity {
         a_builder.setMessage("1. Rotate the device in '8' shaped position to calibrate. \n\n" +
                 "2. Tap on any anchor point to Summon the Watson Avatar.\n\n" +
                 "3. Click on the microphone button and start talking...\n once done talking click the microphone button again and wait for the assistant to reply.\n\n" +
-                "4. Click on the cancel button to hide the Watson Avatar\n")
+                "4. Click on the route button to train the path\n")
                 .setCancelable(false)
                 .setPositiveButton("OK", (dialog, which) -> dialog.cancel());
         AlertDialog alert = a_builder.create();
         alert.setTitle("Tutorial");
-//        alert.show();
+        alert.show();
 
-            // All Permissions are Granted Proceed
+        // All Permissions are Granted Proceed
 
-            // Get Location co-ordinates
-            locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        // Get Location co-ordinates
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
-            @SuppressLint("MissingPermission") Location location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-            GetLocationCoordinates getLocationCoordinates = new GetLocationCoordinates();
-            getLocationCoordinates.onLocationChanged(location);
+        @SuppressLint("MissingPermission") Location location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+        GetLocationCoordinates getLocationCoordinates = new GetLocationCoordinates();
+        getLocationCoordinates.onLocationChanged(location);
 
-            query = getLocationCoordinates.queryparams;
-            Log.d("LOCATION DETAILS2 ->", query);
+        query = getLocationCoordinates.queryparams;
+        Log.d("LOCATION DETAILS2 ->", query);
 
 
         RemoveAvatar = findViewById(R.id.removeAvatar);
@@ -207,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
         mobileFoundationProductsFetch();
 
 
-        Toast.makeText(getApplicationContext(), "Tap Anywhere on the Anchor to Summon the Avatar Assistant",Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), "Tap Anywhere on the Anchor to Summon the Avatar Assistant",Toast.LENGTH_LONG).show();
 
         // Send button ActionListener
 
@@ -220,19 +224,22 @@ public class MainActivity extends AppCompatActivity {
 
         // Record Button onClick Listener
 
-        assistant.setOnClickListener(v -> speech());
+//        Uncomment this to use google speech to text instead of watson speech to text
+//
+//        assistant.setOnClickListener(v -> speech());
 
         // Record Button Tap and hold ActionListener
 
-//        assistant.setOnTouchListener((v, event) -> {
-//                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-//                    recordMessage();
-//
-//                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-//                    stopRecording();
-//                }
-//                return false;
-//            });
+        //Comment this block to disable watson speech to text
+        assistant.setOnTouchListener((v, event) -> {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    recordMessage();
+
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    stopRecording();
+                }
+                return false;
+            });
     }
 
     private void InitializeWatsonServices(){
@@ -300,6 +307,7 @@ public class MainActivity extends AppCompatActivity {
                 CloudFunctionsURL = productObject.getString("cloudfuncurl");
 
                 Log.d("JSON OBJECT -> ", String.valueOf(productObject));
+            Log.d("CF -> ", CloudFunctionsURL);
 
                 InitializeWatsonServices();
         } catch (JSONException e) {
@@ -316,7 +324,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                response -> Toast.makeText(getApplicationContext(), response,Toast.LENGTH_LONG).show(),
+                response -> Log.d(TAG, "cloudfunctionApicall: "+response),
                 error -> Toast.makeText(getApplicationContext(), "something went wrong storing the co-ordinates",Toast.LENGTH_LONG).show());
 
         // Add the request to the RequestQueue.
@@ -331,7 +339,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                response -> Toast.makeText(getApplicationContext(), response,Toast.LENGTH_LONG).show(),
+                response -> Log.d(TAG, "cloudProcessing: "+response),
                 error -> Toast.makeText(getApplicationContext(), "something went wrong processing...",Toast.LENGTH_SHORT).show());
 
         // Add the request to the RequestQueue.
@@ -379,6 +387,11 @@ public class MainActivity extends AppCompatActivity {
                     arFragment.getArSceneView().getScene().addChild(anchorNode);
                     RemoveAvatar.setVisibility(View.VISIBLE);
 
+                    tooltip = new Tooltip.Builder(RemoveAvatar)
+                            .setText("Train path in Augmented Reality")
+                            .setBackgroundColor(Color.CYAN)
+                            .setCancelable(true)
+                            .show();
                     // Set the position of the Avatar
 
                     TransformableNode node = new TransformableNode(arFragment.getTransformationSystem());
@@ -391,22 +404,14 @@ public class MainActivity extends AppCompatActivity {
 
                     sendMessage();
 
-                    // Set Static Center Position of the Avatar
-
-//                    arFragment.getArSceneView().getScene().addOnUpdateListener(frameTime -> {
-//                        Camera camera = arFragment.getArSceneView().getScene().getCamera();
-//                        Ray ray = camera.screenPointToRay(1080/2f, 1920/2f);
-//                        Vector3 newPosition = ray.getPoint(1f);
-//                        node.setLocalPosition(newPosition);
-//                    });
-
-                    // Set Static Position of the Avatar
-
-//                    SkeletonNode skeletonNode = new SkeletonNode();
-//                    skeletonNode.setParent(anchorNode);
-//                    skeletonNode.setRenderable(modelRenderable);
-
                     assistant.setVisibility(View.VISIBLE);
+
+                    tooltip = new Tooltip.Builder(assistant)
+                            .setText("Tap and hold to talk")
+                            .setBackgroundColor(Color.CYAN)
+                            .setCancelable(true)
+                            .show();
+                    // Set the position of the Avatar
 
                     // Remove Avatar from the Sceneform
 
