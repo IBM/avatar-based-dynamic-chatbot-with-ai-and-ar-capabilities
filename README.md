@@ -584,7 +584,7 @@ Registered app for platform: android
 
 - The user summons the Avatar Chatbot by taping on the Anchors in the app.
 
-<img src="/doc/source/images/mobilescreenshot1.png" alt="mobile screenshot" width="320" /> 
+<img src="/doc/source/images/tapandhold.png" alt="mobile screenshot" width="240" /> 
 
 1. The Avatar Chatbot tells user their location.
 
