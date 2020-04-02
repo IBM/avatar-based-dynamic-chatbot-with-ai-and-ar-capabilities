@@ -633,9 +633,13 @@ Registered app for platform: android
 
 **NOTE: This code pattern acts as a foundation for building intelligent AR based chatbots. You can modify this code pattern and build as per your requirement.**
 
-# Troubleshooting
+# Related Content
 
-Refer to [Troubleshooting](Troubleshooting.md).
+* [Build a ‘try-and-buy’ mobile application with augmented reality capabilities for a furniture store](https://developer.ibm.com/patterns/augmented-reality-android-mobile-app-interior-decorator/)
+
+* [Integrate a virtual mirror with e-commerce products](https://developer.ibm.com/patterns/integrate-a-virtual-mirror-with-e-commerce-products/)
+
+* [A Watson Visual Recognition recommendation example](https://developer.ibm.com/blogs/a-watson-visual-recognition-recommendation-example/)
 
 <!-- keep this -->
 ## License
