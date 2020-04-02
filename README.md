@@ -588,7 +588,7 @@ Registered app for platform: android
 
 1. The Avatar Chatbot tells user their location.
 
-> Bot: Looks like you are in <b>"\<YOUR-LOCATION>?"</b>
+> Bot: Looks like you are in <b>\<YOUR-LOCATION>?</b>
 
 2. The user has to reply with yes to confirm.
 
