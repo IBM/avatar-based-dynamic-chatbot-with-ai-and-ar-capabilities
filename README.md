@@ -1,4 +1,3 @@
-### ***Work in Progress***
 # Avatar based dynamic chatbot powered with AI and AR capabilities
 
 This Code Pattern is a demonstration of Avatar based Chatbot, an android mobile Chatbot Application with AI and AR capabilities which dynamically fetches the information using APIs in Watson Assistant via Webhooks(Cloud Functions).
@@ -575,13 +574,61 @@ Registered app for platform: android
 
 # Sample output
 
-1. Rotate the device in '8' shaped position to calibrate.
-2. Tap on any anchor point to Summon the Watson Avatar.
-3. Click and hold on the microphone button and start talking...
-4. Once done talking release the microphone button and wait for the Watson Avatar to reply.
-5. Click on the cancel button to hide the Watson Avatar.
+**NOTE: Please follow the tutorial in the app to train the path before folowing this flow.**
 
-<img src="/doc/source/images/mobilescreenshot1.png" alt="Camera" width="240" /> 
+<img src="/doc/source/images/trainpath.png" alt="train path" width="240" /> 
+
+### The workflow of the app is as follows.
+
+**NOTE: The user has to follow the exact same workflow for the app to function as intended.**
+
+- The user summons the Avatar Chatbot by taping on the Anchors in the app.
+
+<img src="/doc/source/images/mobilescreenshot1.png" alt="mobile screenshot" width="240" /> 
+
+1. The Avatar Chatbot tells user their location.
+
+> Hi! Looks like you are in <b>IBM G2 Block?</b>
+
+2. The user has to reply with yes to confirm.
+
+> Yes
+
+3. The Avatar Chatbot can then read the user's Interest based on their activities on the phone. 
+
+> I got to know that you are a massive <b>Nike fan</b>, Do you want me to guide you to a <b>nearby Nike store</b> that has got new collections?
+
+**NOTE: This feature is just to showcase the capabilities of watson services and is not currently implemented in the code pattern.**
+
+4. Asuming user wants to do something else user has to reply with no thanks.
+
+> No thanks
+
+5. The Avatar Chatbot will ask the following.
+
+> Okay, do you want me to help with anything else?
+
+6. Asuming user is looking for restaurants the user has to say the following.
+
+> I am looking for a good restaurant near me
+
+**NOTE: In this code pattern we have just inplemented Food API to get food related queries, you can have any service APIs to increase the functionality of the chatbot.**
+
+7. The Avatar Chatbot finds out the best restaurant nearby.
+
+> Slug has the best rating around this place. Guess what? they are offering buy 1 get 1 on drinks today. Do you want me to guide you to Slug?
+
+8. Asuming the user is satisfied with the result, the user confirms by saying cool works.
+
+> cool works!
+
+7. The Avatar Chatbot says the following.
+
+> Please follow the path.
+
+- The User will then click on **SHOW ROUTE** button and the Augmented path will appear guiding you to the destination.
+
+<img src="/doc/source/images/path.png" alt="path" width="240" /> 
 
 # Troubleshooting
 
