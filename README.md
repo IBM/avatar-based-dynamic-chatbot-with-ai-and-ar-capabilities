@@ -640,7 +640,7 @@ Registered app for platform: android
 
 **NOTE: This code pattern acts as a foundation for building intelligent AR based chatbots. You can modify this code pattern and build as per your requirement.**
 
-# Related Content
+## Related Content
 
 * [Build a ‘try-and-buy’ mobile application with augmented reality capabilities for a furniture store](https://developer.ibm.com/patterns/augmented-reality-android-mobile-app-interior-decorator/)
 
