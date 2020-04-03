@@ -37,7 +37,10 @@ When the reader has completed this Code Pattern, they will understand how to:
 ## Pre-requisites
 * [IBM Cloud account](https://www.ibm.com/cloud/): Create an IBM Cloud account.
 * [Python 3](https://www.python.org/downloads/): Install python 3.
-* [Android Studio](https://developer.android.com/studio): Install Android Studio.
+* [Java 1.8.x](https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=openj9): Make sure you have required version (Java 1.8.x).
+* Before you begin please note that this application uses AR-Core Library, and not all Android devices support AR-Core. To know which devices support AR-Core visit the [Supported Devices](https://developers.google.com/ar/discover/supported-devices) page.
+* [Android Studio](https://developer.android.com/studio) : Download and Install Android Studio with SDK Version 26 or Above.
+
 
 # Steps
 
