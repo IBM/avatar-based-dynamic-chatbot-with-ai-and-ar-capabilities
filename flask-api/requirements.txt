@@ -3,3 +3,5 @@ Flask-Cors==3.0.7
 pandas==0.23.4
 requests==2.22.0
 xlrd==1.2.0
+reverse_geocoder==1.5.1
+geopy
