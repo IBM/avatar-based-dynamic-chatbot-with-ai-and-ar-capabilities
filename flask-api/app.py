@@ -15,9 +15,9 @@ CORS(app)
 global entity_type,entity_id
 
 @app.route("/reverse", methods=["GET"])
-def reverseGeocode(coordinates): 
-    result = rg.search(coordinates) 
-    location = ""  
+def reverseGeocode(coordinates):
+    result = rg.search(coordinates)
+    location = ""
     # result is a list containing ordered dictionary.
     for i in result:
         for key, value in i.items():
@@ -32,10 +32,10 @@ def getRestaurants(coordinates):
     information_about_restaurant = []
 
     getRestaurantsFromLatAndLon = 'https://developers.zomato.com/api/v2.1/search?lat='+str(lat)+'&lon='+str(lon)+ '&radius=500&sort=real_distance&order=asc&start=0&count=20'
-    header = {"User-agent": "curl/7.43.0", "Accept": "application/json", "user-key": "2874040a2f5a7bbe4e13b5b6b21cedd9"}
+    header = {"User-agent": "curl/7.43.0", "Accept": "application/json", "user-key": "122896cab41b01e56f0993438deb6fd8"}
     response = requests.get(getRestaurantsFromLatAndLon, headers=header)
     Restaurant_info = response.json()
-   
+
     for k,v in Restaurant_info.items():
         if(k=='restaurants'):
             for i in Restaurant_info[k]:
@@ -53,16 +53,16 @@ def getlocation():
     location = geolocator.reverse(location)
     place = location.address
     outputjson = {"place": place.split(',')[0]}
-    
+
     return jsonify(outputjson)
 
 @app.route("/getrestaurants", methods=["GET"])
 def getrestaurants():
     lat = request.args['lat']
     lon = request.args['lon']
-    coordinates =(lat, lon) 
+    coordinates =(lat, lon)
     return getRestaurants(coordinates)
-    
+
 @app.route("/")
 def main():
     return "<h1>OK</h1>"
