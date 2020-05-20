@@ -1,5 +1,6 @@
 ---
 applications:
  - name: my-api
+ - name: ayuda-me
    random-route: true
    memory: 128M
