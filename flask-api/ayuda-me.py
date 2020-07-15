@@ -32,7 +32,7 @@ def getRestaurants(coordinates):
     information_about_restaurant = []
 
     getRestaurantsFromLatAndLon = 'https://developers.zomato.com/api/v2.1/search?lat='+str(lat)+'&lon='+str(lon)+ '&radius=500&sort=real_distance&order=asc&start=0&count=20'
-    header = {"User-agent": "curl/7.43.0", "Accept": "application/json", "user-key": "122896cab41b01e56f0993438deb6fd8"}
+    header = {"User-agent": "curl/7.43.0", "Accept": "application/json", "user-key": "2874040a2f5a7bbe4e13b5b6b21cedd9"}
     response = requests.get(getRestaurantsFromLatAndLon, headers=header)
     Restaurant_info = response.json()
 
