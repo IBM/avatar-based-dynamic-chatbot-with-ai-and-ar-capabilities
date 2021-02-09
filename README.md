@@ -1,4 +1,4 @@
-# Avatar based dynamic chatbot powered with AI and AR capabilities
+# Build a dynamic avatar-based mobile chatbot powered with AI and AR capabilities
 
 State of the art chatbots need an upgrade, and the good news is they’re getting one. Technologies like artificial intelligence (AI), augmented reality (AR), virtual reality (VR) and more robust network connectivity are opening up a new dimension for  today’s traditional robotic, web-based chatbots. Chatbots integrated with these technologies have the ability to advance businesses bottom line with the help of human connection.
 
