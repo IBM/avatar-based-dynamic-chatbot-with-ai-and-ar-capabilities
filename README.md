@@ -485,7 +485,7 @@ After Installing postman type the `url` created in [step 3.2] and append it with
 
 **NOTE:Copy the API key as it will be required in the subsequent step.** 
 
-### 9. Configure Android App
+### 9. Configure the Android App
 
 * There are 3 more things to be done before running the APP.
 
