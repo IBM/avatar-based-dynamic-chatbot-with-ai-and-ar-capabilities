@@ -92,7 +92,7 @@ header = {"User-agent": "curl/7.43.0", "Accept": "application/json", "user-key":
 
 ![](doc/source/images/zomato_2.png)
 
-### 4. Deploy the Flask Application
+### 4. Create Python API
 * Create a [Cloud Foundry](https://cloud.ibm.com/catalog/starters/cloud-foundry?runtime=python) service with python runtime and follow the steps.
 
 ![](doc/source/images/cloudfoundry.png)
@@ -485,7 +485,7 @@ After Installing postman type the `url` created in [step 3.2] and append it with
 
 **NOTE:Copy the API key as it will be required in the subsequent step.** 
 
-### 9. Configure Android App
+### 9. Configure Avatar App
 
 * There are 3 more things to be done before running the APP.
 
