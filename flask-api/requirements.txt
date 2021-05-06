@@ -1,5 +1,5 @@
 Flask==1.0.2
-Flask-Cors==3.0.7
+Flask-Cors==3.0.9
 pandas==0.23.4
 requests==2.22.0
 xlrd==1.2.0
