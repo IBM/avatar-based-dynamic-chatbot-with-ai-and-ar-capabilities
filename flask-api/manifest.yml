@@ -1,5 +1,5 @@
 ---
 applications:
- - name: ayuda-me
+ - name: app
    random-route: true
    memory: 128M
