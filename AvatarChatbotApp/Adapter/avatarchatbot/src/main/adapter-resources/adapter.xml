@@ -14,12 +14,12 @@
 	<description>avatarchatbot</description>
 
 	<JAXRSApplicationClass>com.ibm.AvatarchatbotApplication</JAXRSApplicationClass>
-	<property name="s2tapi" displayName="Speech To Text API Key" defaultValue=""/>
-	<property name="s2turl" displayName="Speech To Text URL" defaultValue=""/>
-	<property name="t2sapi" displayName="Text To Speech API Key" defaultValue=""/>
-	<property name="t2surl" displayName="Text To Speech URL" defaultValue=""/>
-	<property name="assistantapi" displayName="Watson Assistant API Key" defaultValue=""/>
-	<property name="assistanturl" displayName="Watson Assistant URL" defaultValue=""/>
-	<property name="assistantworkspaceid" displayName="Watson Assistant Skill ID" defaultValue=""/>
+	<property name="s2tapi" displayName="Speech To Text API Key" defaultValue="KmOstTM4nEF5jcx7dsE8kBlMOhOfODNKwmMrdB65YoDr"/>
+	<property name="s2turl" displayName="Speech To Text URL" defaultValue="https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/a3d42f01-cdee-44af-a2f2-079fee6a8105"/>
+	<property name="t2sapi" displayName="Text To Speech API Key" defaultValue="aw9Si10lSOR0VJg_SLypdXFRvctLPrWJukRdAutJtnWn"/>
+	<property name="t2surl" displayName="Text To Speech URL" defaultValue="https://api.eu-gb.text-to-speech.watson.cloud.ibm.com/instances/4ee195db-5f13-49d5-a432-e98e0d97ec00"/>
+	<property name="assistantapi" displayName="Watson Assistant API Key" defaultValue="edNiA5oBXrX26rJaq6O9vbWEfdBpuEGGe1WaFUsaDnfg"/>
+	<property name="assistanturl" displayName="Watson Assistant URL" defaultValue="https://api.eu-gb.assistant.watson.cloud.ibm.com/instances/8abf52bc-29a9-40b3-843c-b7397520e807"/>
+	<property name="assistantworkspaceid" displayName="Watson Assistant Skill ID" defaultValue="31120510-add2-400c-84ab-09fef83a3b5d"/>
 	<property name="cloudfuncurl" displayName="Cloud Functions URL" defaultValue=""/>
 </mfp:adapter>

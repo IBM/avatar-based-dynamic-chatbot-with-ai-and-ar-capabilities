@@ -1,5 +1,5 @@
 ---
 applications:
- - name: my-api
+ - name: app
    random-route: true
    memory: 128M
